@@ -1,0 +1,125 @@
+version: "3.1"
+
+intents:
+- greet
+- thank
+- affirm
+- goodbye
+- more_operations
+- addition
+- subtraction
+- multiplication
+- division
+
+entities:
+- first_operand
+- second_operand
+- operation
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm a bot that can help you with basic mathematical operations. What do you want me to do?"
+
+  utter_thank:
+  - text: "You're welcome!"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a nice day."
+
+  utter_more_operations:
+  - text: "Sure! What do you want me to do?"
+
+  utter_ask_first_operand:
+  - text: "What is the first operand?"
+
+  utter_ask_second_operand:
+  - text: "What is the second operand?"
+
+  utter_ask_operation:
+  - text: "What mathematical operation do you want me to do?"
+
+  utter_invalid_input:
+  - text: "Sorry, I didn't understand your input. Please try again."
+
+  utter_division_by_zero:
+  - text: "Sorry, division by zero is not allowed. Please enter a valid second operand."
+
+actions:
+- utter_greet
+- utter_thank
+- utter_goodbye
+- utter_more_operations
+- utter_ask_first_operand
+- utter_ask_second_operand
+- utter_ask_operation
+- utter_invalid_input
+- utter_division_by_zero
+- action_perform_math_operation
+- action_check_division_by_zero
+
+slots:
+  first_operand:
+    type: float
+    mappings:
+    - type: custom
+      function: actions.ParseFloatMapper
+  second_operand:
+    type: float
+    mappings:
+    - type: custom
+      function: actions.ParseFloatMapper
+  operation:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: operation
+
+# intents:
+# - greet
+# - goodbye
+# - math_operation
+
+# entities:
+# - first_operand
+# - second_operand
+# - operation
+
+# slots:
+#   first_operand:
+#     type: float
+#     mappings:
+#     - type: custom
+#   second_operand:
+#     type: float
+#     mappings:
+#     - type: custom
+#   operation:
+#     type: text
+#     mappings:
+#     - type: from_entity
+#       entity: operation
+
+# responses:
+#   utter_greet:
+#   - text: "Hello! I'm a math bot. What can I help you with today?"
+
+#   utter_goodbye:
+#   - text: "Goodbye! Have a nice day."
+
+#   utter_ask_operation:
+#   - text: "What mathematical operation do you want to perform?"
+
+#   utter_ask_first_operand:
+#   - text: "What is the first operand?"
+
+#   utter_ask_second_operand:
+#   - text: "What is the second operand?"
+
+#   utter_invalid_operand:
+#   - text: "I'm sorry, that is not a valid operand. Please enter a valid number."
+
+#   utter_result:
+#   - text: "{operation} of {first_operand} and {second_operand} is {result}."
+
+# actions:
+# - action_math_operation

@@ -1,0 +1,5 @@
+models/
+results/
+*.dot
+.rasa/
+chatenv/

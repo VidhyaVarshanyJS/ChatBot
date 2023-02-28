@@ -1,0 +1,117 @@
+version: "3.1"
+
+
+stories:
+  # - story: Happy path - addition
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: addition
+  #     - action: utter_ask_first_operand
+  #     - slot_was_set:
+  #       - operation: "addition"
+  #     - intent: affirm
+  #     - action: utter_ask_second_operand
+
+  # - story: Happy path - subtraction
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: subtraction
+  #     - action: utter_ask_first_operand
+  #     - slot_was_set:
+  #       - operation: "subtraction"
+  #     - intent: affirm
+  #     - action: utter_ask_second_operand
+
+  # - story: Happy path - multiplication
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: multiplication
+  #     - action: utter_ask_first_operand
+  #     - slot_was_set:
+  #       - operation: "multiplication"
+  #     - intent: affirm
+  #     - action: utter_ask_second_operand
+
+  # - story: Happy path - division
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: division
+  #     - action: utter_ask_first_operand
+  #     - slot_was_set:
+  #       - operation: "division"
+  #     - intent: affirm
+  #     - action: utter_ask_second_operand
+      
+  # - story: More operations
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: addition
+  #     - action: utter_ask_first_operand
+  #     - slot_was_set:
+  #       - operation: "addition"
+  #     - intent: affirm
+  #     - action: utter_ask_second_operand
+     
+
+       
+
+# stories:
+# - story: greet and goodbye
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: perform math operation
+#   steps:
+#   - intent: math_operation
+#   - action: utter_ask_operation
+#   - intent: math_operation
+#     entities:
+#     - operation: "addition"
+#   - action: utter_ask_first_operand
+#   - slot_was_set:
+#     - operation: "addition"
+#   - intent: math_operation
+#     entities:
+#     - first_operand: "4"
+#   - action: utter_ask_second_operand
+#   - slot_was_set:
+#     - first_operand: "4"
+#   - slot_was_set:
+#     - operation: "addition"
+#   - intent: math_operation
+#     entities:
+#     - second_operand: "5"
+#   - action: action_math_operation
+#   - action: utter_result
+
+# - story: perform another math operation
+#   steps:
+#   - intent: math_operation
+#   - action: utter_ask_operation
+#   - intent: math_operation
+#     entities:
+#     - operation: "division"
+#   - action: utter_ask_first_operand
+#   - slot_was_set:
+#     - operation: "division"
+#   - intent: math_operation
+#     entities:
+#     - first_operand: "5"
+#   - action: utter_ask_second_operand
+#   - slot_was_set:
+#     - first_operand: "5"
+#   - slot_was_set:
+#     - operation: "division"
+#   - intent: math_operation
+#     entities:
+#     - second_operand: "2"
+#   - action: action_math_operation
+#   - action: utter_result

@@ -1,0 +1,97 @@
+version: "3.1"
+
+rules:
+- rule: Handle greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Handle thank you
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- rule: Handle goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Handle more operations
+  steps:
+  - intent: more_operations
+  - action: utter_more_operations
+  - action: utter_ask_operation
+
+- rule: Handle addition
+  steps:
+  - intent: addition
+  - action: utter_ask_first_operand
+  - slot_was_set:
+    - operation: addition
+  - action: utter_ask_second_operand
+  - action: action_perform_math_operation
+  - action: utter_more_operations
+
+- rule: Handle subtraction
+  steps:
+  - intent: subtraction
+  - action: utter_ask_first_operand
+  - slot_was_set:
+    - operation: subtraction
+  - action: utter_ask_second_operand
+  - action: action_perform_math_operation
+  - action: utter_more_operations
+
+- rule: Handle multiplication
+  steps:
+  - intent: multiplication
+  - action: utter_ask_first_operand
+  - slot_was_set:
+    - operation: multiplication
+  - action: utter_ask_second_operand
+  - action: action_perform_math_operation
+  - action: utter_more_operations
+
+- rule: Handle division
+  steps:
+  - intent: division
+  - action: utter_ask_first_operand
+  - slot_was_set:
+    - operation: division
+  - action: utter_ask_second_operand
+  - action: action_check_division_by_zero
+  - action: action_perform_math_operation
+  - action: utter_more_operations
+
+- rule: Handle invalid input
+  steps:
+  - action: utter_invalid_input
+  - action: action_perform_math_operation
+
+
+# rules:
+# - rule: Respond to math_operation intent
+#   steps:
+#   - intent: math_operation
+#   - action: utter_ask_operation
+#   - intent: operation
+#   - slot_was_set:
+#       - operation: operation
+#   - action: utter_ask_first_operand
+#   - intent: first_operand
+#   - slot_was_set:
+#       - first_operand: first_operand
+#   - action: utter_ask_second_operand
+#   - intent: second_operand
+#   - slot_was_set:
+#       - second_operand: second_operand
+#   - action: action_math_operation
+#   - action: utter_result
+
+# - rule: Handle invalid operands
+#   condition:
+#   - slot_was_set:
+#       - first_operand: None
+#       - second_operand: None
+#   steps:
+#   - action: utter_invalid_operand

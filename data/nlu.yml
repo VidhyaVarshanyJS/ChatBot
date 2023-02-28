@@ -1,0 +1,117 @@
+version: "3.1"
+
+# nlu:
+# - intent: greet
+#   examples: |
+#     - hi
+#     - hello
+#     - hey
+# - intent: goodbye
+#   examples: |
+#     - bye
+#     - goodbye
+#     - see you later
+# - intent: math_operation
+#   examples: |
+#     - What is the sum of [4](first_operand) and [5](second_operand)?
+#     - What is [10](first_operand) minus [2](second_operand)?
+#     - What is [6](first_operand) times [3](second_operand)?
+#     - What is [12](first_operand) divided by [3](second_operand)?
+#     - What is the sum of 10 and 4?
+#     - What is the subraction of 10 from 4?
+#     - divide 10 by 4
+#     - multiply 10 and 4
+#     - add 7 and 5
+#     - subract 6 and 7
+#     - division of 10 and 5
+#     - addition of 5 and 6
+#     - subraction of 6 and 8
+
+
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - good morning
+      - good evening
+      - hi there
+      - hi bot
+      - hello bot
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - bye bot
+      - goodbye bot
+  - intent: thank
+    examples: |
+      - thanks
+      - thank you
+      - thx
+      - appreciate it
+  - intent: addition
+    examples: |
+      - add
+      - addition
+      - sum
+      - plus
+      - add numbers
+      - add these numbers
+  - intent: subtraction
+    examples: |
+      - subtract
+      - subtraction
+      - minus
+      - difference
+      - subtract numbers
+      - subtract these numbers
+  - intent: multiplication
+    examples: |
+      - multiply
+      - multiplication
+      - times
+      - product
+      - multiply numbers
+      - multiply these numbers
+  - intent: division
+    examples: |
+      - divide
+      - division
+      - divided by
+      - quotient
+      - divide numbers
+      - divide these numbers
+  - intent: more_operations
+    examples: |
+      - more operations
+      - do another operation
+      - perform another operation
+  - intent: affirm
+    examples: |
+      - yes
+      - sure
+      - okay
+      - yep
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - nevermind
+  - intent: stop
+    examples: |
+      - stop
+      - cancel
+      - exit
+  - intent: invalid_input
+    examples: |
+      - huh
+      - what
+      - sorry
+      - I don't understand
+
+
+
